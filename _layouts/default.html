@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+    
+    {% include head.html %}
+
+    <body>
+
+        {{ content }}
+
+        {% include footer.html %}
+
+    </body>
+
+    <!-- Scripts -->
+    <script src="/assets/js/page.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+</html>
