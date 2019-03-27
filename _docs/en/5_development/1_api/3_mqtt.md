@@ -44,6 +44,26 @@ Body:
 }
 ```
 
+#### Declare a new service
+
+This topic is useful to declare a new service in Gladys.
+
+Topic
+```
+/gladys/master/service/create
+```
+
+Body:
+```json
+{
+  "name": "Voice Recognition Service",
+  "selector": "voice-recognition-service",
+  "pod_id": "42c78884-af53-4514-974a-136fe07bd9e7",
+  "version": "1.0.0",
+  "has_message_feature": true
+}
+```
+
 #### Create a device
 
 Topic
