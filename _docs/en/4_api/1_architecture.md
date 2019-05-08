@@ -1,9 +1,9 @@
 ---
 name: architecture
 title: Architecture
-permalink: "/en/concept"
+permalink: "/en/api"
 lang: en
-category: Concept
+category: API
 ---
 
 Coming soon..

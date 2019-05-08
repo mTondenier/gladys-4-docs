@@ -1,8 +1,8 @@
 ---
 layout: docs
 name: intro
-title: Documentation
-permalink: "/en/documentation"
+title: API
+permalink: "/en/api"
 lang: en
 ---
 

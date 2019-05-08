@@ -1,11 +1,11 @@
 ---
-name: mqtt
+name: mqtt-api
 title: MQTT API
-permalink: "/en/development"
+permalink: "/en/api"
 lang: en
-category: Development
-sub-category: API
+category: API
 ---
+
 
 If you configured a MQTT Broker with your Gladys installation, you have access to Gladys MQTT API.
 
