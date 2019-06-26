@@ -1,8 +1,8 @@
 ---
 name: coming-soon
-title: En cours..
+title: Coming soon..
 permalink: "/fr/faq"
 lang: fr
 ---
 
-En cours..
+Coming soon..

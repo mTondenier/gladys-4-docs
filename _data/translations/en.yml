@@ -18,7 +18,7 @@ nav-bar:
       ios: IOS
       gladys-voice: Gladys-voice
       gladys-bluetooth: Gladys-bluetooth
-    development: 
+    development:
       api: API
       tools: Tools
       create-internal-module: Create an internal module
@@ -42,7 +42,7 @@ nav-bar:
 home:
   header:
     title: Gladys Documentation
-    text: All the documentation concerning the Gladys personal assistant is here. Whether you are a developer or a simple user here you will find everything you need.
+    text: All the documentation concerning Gladys Assistant can be found here. Whether you are a developer or a simple user, you will find everything you need.
     install-button: Install
   first-section:
     concepts: Concepts
@@ -75,7 +75,6 @@ home:
 
 faq:
   title: Frequently asked questions
-  header-text: If you have a question and couldn't find it here, just create a post on community forum. 
+  header-text: If you have a question and couldn't find it here, just create a post on community forum.
   forum: Forum
   title-list: List of questions
-    

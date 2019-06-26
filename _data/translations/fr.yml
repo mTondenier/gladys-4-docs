@@ -18,7 +18,7 @@ nav-bar:
       ios: IOS
       gladys-voice: Gladys-voice
       gladys-bluetooth: Gladys-bluetooth
-    development: 
+    development:
       api: API
       tools: Outils
       create-internal-module: Créer un module interne
@@ -41,14 +41,14 @@ nav-bar:
 
 home:
   header:
-    title: Gladys Documentation
-    text: Toute la documentation concernant l'assistant personnel Gladys se trouve ici. Que vous soyez développeur ou simple utilisateur vous trouverez ici tout ce dont vous avez besoin.
+    title: Documentation Gladys Assistant
+    text: Toute la documentation concernant Gladys Assistant se trouve ici. Que vous soyez développeur ou simple utilisateur vous trouverez ici tout ce dont vous avez besoin.
     install-button: Installer
   first-section:
     concepts: Concepts
     concepts-text: Comprendre les bases du développement de Gladys.
-    starter-guide: Guide de démrrage
-    starter-guide-text: Installer et configurer votre assistant personnel Gladys.
+    starter-guide: Guide de démarrage
+    starter-guide-text: Installer et configurer votre assistant Gladys.
     documentation: Documentation
     documentation-text: Lire la documentation pour comprendre les fondamentaux de Gladys.
   second-section:
