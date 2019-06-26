@@ -6,4 +6,4 @@ permalink: "/en/api"
 lang: en
 ---
 
-Coming soon..
+You'll find here all informations about Gladys architecture and its API.
