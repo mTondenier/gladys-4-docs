@@ -6,34 +6,34 @@ lang: fr
 category: Installation
 ---
 
-The process is almost the same as on the Raspberry Pi, it's just a container to start.
+Le process est presque le même que pour Raspberry Pi.
 
 ### Install Docker Desktop
 
-You first need to install [Docker Desktop](https://www.docker.com/products/docker-desktop).
+Vous devez d'abord installer [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
-Follow the instructions on Docker website.
+Suivez les instructions sur leur site.
 
-Docker Desktop should install Kitematic, a Docker GUI. If it doesn't, you can install get it on [Kitematic](https://kitematic.com/) website.
+Docker Desktop devrait normalement installer Kitematic. Si ce n'est pas le cas, rendez-vous sur le site de [Kitematic](https://kitematic.com/).
 
-### Start Gladys
+### Lancer Gladys
 
-You need to start Kitematic first.
+Vous devez lancer Kitematic.
 
-Then, search for "gladysassistant":
+Puis, dans l'interface, cherchez "gladysassistant":
 
 <img src="/assets/image/installation/docker-desktop/kitematic-gladysassistant.png" alt="Kitematic gladys assistant" class="img-responsive" />
 
-Select the tag "4.0.0-alpha-amd64":
+Sélectionnez le tag "4.0.0-alpha-amd64":
 
 <img src="/assets/image/installation/docker-desktop/kitematic-select-tag.png" alt="Kitematic gladys assistant" class="img-responsive" />
 
-Click on "Create" to start a new container:
+Cliquez sur "Create" pour lancer un nouveau container:
 
 <img src="/assets/image/installation/docker-desktop/kitematic-start-gladys.png" alt="Kitematic gladys assistant" class="img-responsive" />
 
-Then open in your browser the address showed by Docker (here, "http://localhost:32768")
+Puis lancez dans votre navigateur l'URL indiqué par Kitematic (ici, "http://localhost:32768")
 
 <img src="/assets/image/installation/docker-desktop/kitematic-success.png" alt="Kitematic gladys assistant" class="img-responsive" />
 
-Success!
+Hop, vous avez accès à Gladys!
