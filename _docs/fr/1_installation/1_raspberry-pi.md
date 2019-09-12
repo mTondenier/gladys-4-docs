@@ -22,11 +22,12 @@ Pour lancer Gladys, exécutez la commande suivante sur votre Raspberry Pi:
 
 ```bash
 docker run -d \
+--restart=always \
 --privileged \
--p 80:1443 \
 --network=host \
 --name gladys \
 -e NODE_ENV=production \
+-e SERVER_PORT=80 \
 -e TZ=Europe/Paris \
 -e SQLITE_FILE_PATH=/var/lib/gladysassistant/gladys-production.db \
 -v /var/run/docker.sock:/var/run/docker.sock \
