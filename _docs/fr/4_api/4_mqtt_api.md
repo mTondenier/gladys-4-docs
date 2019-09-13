@@ -101,25 +101,14 @@ Body:
 Topic:
 
 ```
-/gladys/device/state/new
+gladys/master/device/state/update
 ```
 
-Example 1:
+Example 1 :
 
 ```json
 {
   "device_feature_external_id": "philips-hue:1:binary",
-  "state": 1
-}
-```
-
-Example 2:
-
-```json
-{
-  "device_external_id": "philips-hue:1",
-  "category": "light",
-  "type": "binary",
   "state": 1
 }
 ```
