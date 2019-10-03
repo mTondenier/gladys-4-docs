@@ -9,7 +9,7 @@ lang: fr
 
 ## Activation du mode développeur
 
-L'activation du mode développeur permet de pour accéder à l'API de la passerelle Xiaomi, donc de recevoir les messages des différentes sondes, ainsi que de piloter les matériels le pouvant, ainsi que la passerelle elle-même.
+L'activation du mode développeur permet à Gladys d'accéder à l'API de la passerelle Xiaomi, donc de recevoir les messages des différentes sondes, ainsi que de piloter les matériels et la passerelle elle-même.
 
 L'activation se fait à partir de l'application "Mi Home". Si elle n'est pas installé sur votre téléphone, commencez par le faire :
 
