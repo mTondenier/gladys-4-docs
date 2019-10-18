@@ -1,0 +1,48 @@
+---
+name: docker
+title: Docker
+permalink: "/en/installation"
+lang: en
+category: Installation
+---
+
+This tutorial is for Raspberry Pi owner who wants to install Gladys with Docker.
+
+To install with Docker on a x86/x64 system, you need to use a different Docker tag.
+
+### Install Docker on the Raspberry Pi
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+chmod u+x get-docker.sh
+VERSION=18.06.3 ./get-docker.sh
+```
+
+### Start Gladys
+
+If you tried the alpha before the beta, you need to remove the `/var/lib/gladysassistant` folder to ensure all files from the alpha are deleted. Warning: you'll lose any data saved in Gladys alpha.
+
+```bash
+docker run -d \
+--restart=always \
+--privileged \
+--network=host \
+--name gladys \
+-e NODE_ENV=production \
+-e SERVER_PORT=80 \
+-e TZ=Europe/Paris \
+-e SQLITE_FILE_PATH=/var/lib/gladysassistant/gladys-production.db \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /var/lib/gladysassistant:/var/lib/gladysassistant \
+-v /dev:/dev \
+gladysassistant/gladys:4.0.0-beta-arm
+```
+
+Note:
+
+- If you are on a x64/x86 architecture, you can change the image to `gladysassistant/gladys:4.0.0-beta-amd64`
+- `-e TZ=Europe/Paris` => Timezone used by container. Feel free to consult [this list](https://fr.wikipedia.org/wiki/List_of_tz_database_time_zones) on wikipedia if you need to change this value.
+
+### Accessing Gladys
+
+You can access Gladys directly by typing the IP of your Raspberry Pi in your browser. To find the IP, just type `ifconfig` on the Raspberry Pi shell, or you can use a network scanner app to find the IP ([Network Scanner](https://play.google.com/store/apps/details?id=com.easymobile.lan.scanner&hl=fr) on Android or [iNet](https://itunes.apple.com/fr/app/inet-network-scanner/id340793353?mt=8) on iOS)

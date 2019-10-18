@@ -1,12 +1,14 @@
 ---
-name: raspberry-pi
-title: Raspberry Pi
+name: docker
+title: Docker
 permalink: "/fr/installation"
 lang: fr
 category: Installation
 ---
 
-Pour cette première Alpha de Gladys 4, nous ne fournissons pas d'image Raspbian, mais juste une image Docker.
+Ce tutoriel vous explique comment installer Gladys avec Docker sur Raspberry Pi.
+
+Pour installer sur une autre architecture, pensez à changer le tag Docker.
 
 ### Installer Docker sur Raspberry Pi
 
@@ -17,6 +19,8 @@ VERSION=18.06.3 ./get-docker.sh
 ```
 
 ### Lancer Gladys
+
+Si vous avez déjà lancé l'alpha auparavant, pensez à supprimer votre dossier `/var/lib/gladysassistant`, car nous avons fais des modifications à ce niveau entre l'alpha et la beta. Attention: vous perdrez les données de l'alpha!
 
 Pour lancer Gladys, exécutez la commande suivante sur votre Raspberry Pi:
 
@@ -33,11 +37,12 @@ docker run -d \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v /var/lib/gladysassistant:/var/lib/gladysassistant \
 -v /dev:/dev \
-gladysassistant/gladys:4.0.0-alpha-arm
+gladysassistant/gladys:4.0.0-beta-arm
 ```
 
 Note:
 
+- Si vous êtes sur une architecture x64/x86, utilisez le tag `4.0.0-beta-amd64`, soit une image `gladysassistant/gladys:4.0.0-beta-amd64`
 - `-e TZ=Europe/Paris` => Pour changer le fuseau horaire du container, vous pouvez modifier cette variable. Vous trouverez toutes les valeurs possibles sur [cette list](https://fr.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ### Accéder à Gladys

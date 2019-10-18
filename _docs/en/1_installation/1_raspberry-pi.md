@@ -6,40 +6,34 @@ lang: en
 category: Installation
 ---
 
-For this first Alpha of Gladys 4, we don't provide a pre-built Raspbian image.
+## Download Gladys Raspbian image
 
-We provide a Docker image which you can run on your Raspberry Pi easily.
+We provide a pre-built Raspbian image with Gladys already configured.
 
-### Install Docker on the Raspberry Pi
+<a class="btn btn-success" href="http://google.fr">Download the image</a>
 
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-chmod u+x get-docker.sh
-VERSION=18.06.3 ./get-docker.sh
-```
+And unzip the downloaded zip file to get a `.img` file.
 
-### Start Gladys
+## Clone the image on a SD card
 
-```bash
-docker run -d \
---restart=always \
---privileged \
---network=host \
---name gladys \
--e NODE_ENV=production \
--e SERVER_PORT=80 \
--e TZ=Europe/Paris \
--e SQLITE_FILE_PATH=/var/lib/gladysassistant/gladys-production.db \
--v /var/run/docker.sock:/var/run/docker.sock \
--v /var/lib/gladysassistant:/var/lib/gladysassistant \
--v /dev:/dev \
-gladysassistant/gladys:4.0.0-alpha-arm
-```
+Then, you just have to clone this image on the SD card you want to use with you Raspberry Pi.
 
-Note:
+I recommend the software [Etcher](https://etcher.io/) (Linux/MacOS/Windows compatible).
 
-- `-e TZ=Europe/Paris` => Timezone used by container. Feel free to consult [this list](https://fr.wikipedia.org/wiki/List_of_tz_database_time_zones) on wikipedia if you need to change this value.
+Install Etcher, plug your SD card into your computer, and clone the `.img` file on your SD card.
 
-### Accessing Gladys
+<img src="/assets/image/installation/etcher.png" alt="Etcher" class="img-responsive" />
 
-You can access Gladys directly by typing the IP of your Raspberry Pi in your browser. To find the IP, just type `ifconfig` on the Raspberry Pi shell, or you can use a network scanner app to find the IP ([Network Scanner](https://play.google.com/store/apps/details?id=com.easymobile.lan.scanner&hl=fr) on Android or [iNet](https://itunes.apple.com/fr/app/inet-network-scanner/id340793353?mt=8) on iOS)
+## Plug your Raspberry Pi
+
+Plug your Raspberry Pi to your local network and the current.
+
+Give it some time to boot.
+
+## Access Gladys
+
+To access Gladys, open your browser on any computer on the local network your Raspberry Pi is connected. Then enter the URL [http://gladys.local](http://gladys.local).
+
+You should see Gladys web UI!
+
+**Note :** If it doesn't work, you can access Gladys directly by typing the IP of your Raspberry Pi in your browser. To find the IP, you can use a network scanner app to find the IP, like ([Network Scanner](https://play.google.com/store/apps/details?id=com.easymobile.lan.scanner&hl=fr) on Android or [iNet](https://itunes.apple.com/fr/app/inet-network-scanner/id340793353?mt=8) on iOS)
