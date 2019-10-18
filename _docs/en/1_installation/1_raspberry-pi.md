@@ -10,7 +10,7 @@ category: Installation
 
 We provide a pre-built Raspbian image with Gladys already configured.
 
-<a class="btn btn-success" href="http://google.fr">Download the image</a>
+<a class="btn btn-success" href="https://mirror-fr-2.gladysassistant.com/releases/gladys-4.0.0-beta.img.zip">Download the image</a>
 
 And unzip the downloaded zip file to get a `.img` file.
 
