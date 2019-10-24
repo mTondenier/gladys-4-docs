@@ -37,6 +37,12 @@ Select "HTTP", and in the "URL" input, enter:
 https://api.gladysgateway.com/v1/api/owntracks/[YOUR-API-KEY]
 ```
 
+In the `UserID` and `DeviceID` input, you can put anything you want (those fields are mandatory).
+
+I put "iphone" for the `DeviceID`, and "pierre-gilles" for the `UserID`.
+
+Gladys uses the API key to identify who is making the request.
+
 <img src="/assets/image/configuration/gateway/open-api-owntracks-2.jpg" alt="Open API owntracks Gladys" class="img-responsive" width="300" />
 
 ### See your location in Gladys

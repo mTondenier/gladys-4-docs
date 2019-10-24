@@ -37,6 +37,12 @@ Sélectionnez "HTTP", puis dans l'input "URL" entrez:
 https://api.gladysgateway.com/v1/api/owntracks/[YOUR-API-KEY]
 ```
 
+Dans `DeviceID` et `UserID`, mettez ce que vous voulez, ce n'est pas utile pour Gladys mais les champs sont obligatoires.
+
+J'ai mis personnellement "iphone" dans `DeviceID` et "pierre-gilles" dans `UserID`.
+
+Gladys utilise la clé d'API pour identifier votre compte.
+
 <img src="/assets/image/configuration/gateway/open-api-owntracks-2.jpg" alt="Open API owntracks Gladys" class="img-responsive" width="300" />
 
 ### Vérifier que l'intégration fonctionne
