@@ -6,16 +6,16 @@ lang: en
 category: Installation
 ---
 
-This tutorial is for Raspberry Pi owner who wants to install Gladys with Docker.
+## On a Raspberry Pi
 
-To install with Docker on a x86/x64 system, you need to use a different Docker tag.
+This tutorial is for Raspberry Pi owner who wants to install Gladys with Docker.
 
 ### Install Docker on the Raspberry Pi
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 chmod u+x get-docker.sh
-VERSION=18.06.3 ./get-docker.sh
+./get-docker.sh
 ```
 
 ### Start Gladys
@@ -46,3 +46,39 @@ Note:
 ### Accessing Gladys
 
 You can access Gladys directly by typing the IP of your Raspberry Pi in your browser. To find the IP, just type `ifconfig` on the Raspberry Pi shell, or you can use a network scanner app to find the IP ([Network Scanner](https://play.google.com/store/apps/details?id=com.easymobile.lan.scanner&hl=fr) on Android or [iNet](https://itunes.apple.com/fr/app/inet-network-scanner/id340793353?mt=8) on iOS)
+
+## On any system
+
+You can run Gladys on any system:
+
+- A Synology NAS
+- A VM
+- Any Linux machine
+- On MacOS
+- On Windows
+
+### Install Docker
+
+I recommend going to the [docker documentation](https://docs.docker.com/) and looking for instructions for your system.
+
+### Start Gladys
+
+Run the command:
+
+```bash
+docker run -d \
+--restart=always \
+--privileged \
+--network=host \
+--name gladys \
+-e NODE_ENV=production \
+-e SERVER_PORT=80 \
+-e TZ=Europe/Paris \
+-e SQLITE_FILE_PATH=/var/lib/gladysassistant/gladys-production.db \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /var/lib/gladysassistant:/var/lib/gladysassistant \
+-v /dev:/dev \
+gladysassistant/gladys:4.0.0-beta-amd64
+```
+
+You can edit the open ports / network mode depending of your system.
