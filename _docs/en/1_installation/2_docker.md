@@ -13,10 +13,11 @@ This tutorial is for Raspberry Pi owner who wants to install Gladys with Docker.
 ### Install Docker on the Raspberry Pi
 
 ```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-chmod u+x get-docker.sh
-./get-docker.sh
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker pi
 ```
+
+Then exit your SSH session, and login again.
 
 ### Start Gladys
 
@@ -46,6 +47,19 @@ Note:
 ### Accessing Gladys
 
 You can access Gladys directly by typing the IP of your Raspberry Pi in your browser. To find the IP, just type `ifconfig` on the Raspberry Pi shell, or you can use a network scanner app to find the IP ([Network Scanner](https://play.google.com/store/apps/details?id=com.easymobile.lan.scanner&hl=fr) on Android or [iNet](https://itunes.apple.com/fr/app/inet-network-scanner/id340793353?mt=8) on iOS)
+
+## Auto-Upgrade Gladys with Watchtower
+
+You can use Watchtower to upgrade automatically Gladys when a new version is available. To do so, start a Watchtower container:
+
+```
+docker run -d \
+  --name watchtower \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  containrrr/watchtower:armhf-latest \
+  --cleanup
+```
 
 ## On any system
 

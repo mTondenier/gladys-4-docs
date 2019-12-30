@@ -13,10 +13,11 @@ Ce tutoriel vous explique comment installer Gladys avec Docker sur Raspberry Pi.
 ### Installer Docker sur Raspberry Pi
 
 ```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-chmod u+x get-docker.sh
-./get-docker.sh
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker pi
 ```
+
+Ensuite, fermez votre session SSH puis reconnectez vous à votre Raspberry Pi.
 
 ### Lancer Gladys
 
@@ -44,6 +45,19 @@ Note:
 
 - Si vous êtes sur une architecture x64/x86, utilisez le tag `4.0.0-beta-amd64`, soit une image `gladysassistant/gladys:4.0.0-beta-amd64`
 - `-e TZ=Europe/Paris` => Pour changer le fuseau horaire du container, vous pouvez modifier cette variable. Vous trouverez toutes les valeurs possibles sur [cette list](https://fr.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+## Mise à jour automatique avec Watchtower
+
+Vous pouvez utiliser Watchtower pour mettre automatiquement Gladys à jour quand une nouvelle version est disponible. Pour cela, lancez le container:
+
+```
+docker run -d \
+  --name watchtower \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  containrrr/watchtower:armhf-latest \
+  --cleanup
+```
 
 ### Accéder à Gladys
 
