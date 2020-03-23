@@ -15,6 +15,7 @@ lang: en
 ## Connect your Rflink Gateway
 
 Go to the Rflink integration Page and click on settings :
+<br>
 <img src="/assets/image/configuration/rflink/settings.PNG" alt="Settings" class="img-responsive" />
 
 
