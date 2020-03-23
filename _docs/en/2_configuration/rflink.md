@@ -32,13 +32,13 @@ Reboot Gladys and you are ready!
 
 There are two types of devices : Actuators and sensors .
 
-# If your device is a sensor : 
+### If your device is a sensor : 
 	go in the devices tab and wait for your sensor to send data , gladys will automatically add the device.
 	
-# If your device is an actuator with a remote : 
+### If your device is an actuator with a remote : 
 	go in the devices tab and press the button of your remote ,  gladys will automatically add the device.
 	
-# If your device is actuator without remote : 
+### If your device is actuator without remote : 
 	You will have to known the id of the device and it's swicth number/channel.
 	<br>
 	go in the devices tab and click on new , add your device manually.
