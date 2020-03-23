@@ -39,7 +39,6 @@ If your device is an actuator with a remote :
 	go in the devices tab and press the button of your remote ,  gladys will automatically add the device.
 	
 If your device is actuator without remote : 
-	You will have to known the id of the device and is swicth number(channel)
-	
+	You will have to known the id of the device and it's swicth number/channel
 	go in the devices tab and click on new , add your device manually.
 
