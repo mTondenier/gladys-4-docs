@@ -14,7 +14,9 @@ lang: en
 
 ## Connect your Rflink Gateway
 
-Go to the Rflink integration Page and click on settings <img src="/assets/image/configuration/rflink/settings.PNG" alt="Settings" class="img-responsive" />
+Go to the Rflink integration Page and click on settings :
+<img src="/assets/image/configuration/rflink/settings.PNG" alt="Settings" class="img-responsive" />
+
 
 select the Usb port on which the gateway is connected and click connect : 
 
